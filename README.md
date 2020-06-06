@@ -36,6 +36,8 @@ Things you may want to cover:
 ### index
 - add_index :users, :email
 
+
+
 ## messagesテーブル
 
 |Column|Type|Options|
@@ -49,6 +51,8 @@ Things you may want to cover:
 - belongs_to :user
 - belongs_to :group
 
+
+
 ## groupsテーブル
 
 |Column|Type|Options|
@@ -60,6 +64,8 @@ Things you may want to cover:
 
 ### index
 - add_index :groups, :name
+
+
 
 ## groups_usersテーブル
 
