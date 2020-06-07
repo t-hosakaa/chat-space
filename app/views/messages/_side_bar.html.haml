@@ -4,8 +4,10 @@
       %p.Name-box__user
         masa
       .Name-box__logos
-        %a{ href: "#", class: "far fa-edit" }
-        %a{ href: "#", class: "fas fa-cog" }
+        = link_to url: "#" do
+          %icon.far.fa-edit.Name-box__logos--icon
+        = link_to url: "#" do
+          %icon.fas.fa-cog.Name-box__logos--icon
   .List
     - 3.times do 
       .Contents
