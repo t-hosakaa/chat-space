@@ -1,0 +1,17 @@
+.Side-bar
+  .User-name
+    .Name-box
+      %p.Name-box__user
+        masa
+      .Name-box__logos
+        = link_to url: "#" do
+          %icon.far.fa-edit.Name-box__logos--icon
+        = link_to url: "#" do
+          %icon.fas.fa-cog.Name-box__logos--icon
+  .List
+    - 3.times do 
+      .Contents
+        %p.Contents__group-name
+          techcamp
+        %p.Contents__message
+          まだメッセージがありません

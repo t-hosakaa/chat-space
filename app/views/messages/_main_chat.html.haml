@@ -1,0 +1,31 @@
+.Main
+  .Group-name
+    .Left
+      %p.Left__title
+        test
+      %ul.Left__member-list
+        %span 
+          Member :
+        %li masa
+        %li taka
+    .Right
+      = link_to "Edit", url: "#", class: "Right__link"
+  .Chat-space
+    - 3.times do
+      .Contents
+        .User
+          %p.User__name
+            masa
+          %p.User__time
+            2020/06/07(Sun) 13:05
+        .Message
+          %p.Message__text
+            おはよう！
+  .Input
+    %form.Form
+      .Input-box
+        %input{ placeholder: "type a message", class: "Input-box__text-field" }
+          %label{ class: "Image far fa-image" }
+            %input{ type: "file", class: "Image__file-btn" }
+      %input{ type: "submit", value: "Send", class: "Form__submit-btn" }  
+        
