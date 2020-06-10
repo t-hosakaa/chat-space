@@ -2,11 +2,11 @@
   .User-name
     .Name-box
       %p.Name-box__user
-        masa
+        = current_user.name
       .Name-box__logos
         = link_to url: "#" do
           %icon.far.fa-edit.Name-box__logos--icon
-        = link_to url: "#" do
+        = link_to edit_user_path(current_user.id) do
           %icon.fas.fa-cog.Name-box__logos--icon
   .List
     - 3.times do 
