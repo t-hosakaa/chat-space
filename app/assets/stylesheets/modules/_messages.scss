@@ -47,6 +47,9 @@ $white: #ffffff;
     .Contents {
       width: 100%;
       padding: 20px 0 40px 0;
+      &__link {
+        text-decoration: none;
+      }
       &__group-name {
         margin: 0 20px 5px 20px;
         font-size: 15px;
