@@ -2,30 +2,22 @@
   .Group-name
     .Left
       %p.Left__title
-        test
+        = @group.name
       %ul.Left__member-list
         %span 
           Member :
-        %li masa
-        %li taka
+        %li
+          - @group.users.each do |user|
+            = user.name
     .Right
-      = link_to "Edit", url: "#", class: "Right__link"
+      = link_to "Edit", edit_group_path(@group), class: "Right__link"
   .Chat-space
-    - 3.times do
-      .Contents
-        .User
-          %p.User__name
-            masa
-          %p.User__time
-            2020/06/07(Sun) 13:05
-        .Message
-          %p.Message__text
-            おはよう！
+    = render @messages  
   .Input
-    %form.Form
-      .Input-box
-        %input{ placeholder: "type a message", class: "Input-box__text-field" }
-          %label{ class: "Image far fa-image" }
-            %input{ type: "file", class: "Image__file-btn" }
-      %input{ type: "submit", value: "Send", class: "Form__submit-btn" }  
-        
+    = form_with model: [@group, @message], class: "Form", local: true do |f|
+      .Form__contents
+        = f.text_field :content, class: "Form__inputContent", placeholder: "type a message"
+        = f.label :image, class: "Form__inputImage" do
+          = icon('far', 'image', class: "Form__icon")
+          = f.file_field :image, class: "Hidden"
+      = f.submit 'Send', class: "Form__submit"
