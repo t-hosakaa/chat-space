@@ -112,6 +112,7 @@ $white: #ffffff;
   .Chat-space {
     height: calc(100vh - (100px + 90px));
     background-color: #fafafa;
+    overflow: scroll;
     .Contents {
       padding: 35px 0 46px 0;
       margin-left: 40px;
