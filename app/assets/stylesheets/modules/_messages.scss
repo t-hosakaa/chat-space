@@ -44,6 +44,7 @@ $white: #ffffff;
   .List {
     height: calc(100vh - 100px);
     background-color: #2f3e51;
+    overflow: scroll;
     .Contents {
       width: 100%;
       padding: 20px 0 40px 0;
